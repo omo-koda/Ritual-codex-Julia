@@ -1,0 +1,67 @@
+skill daily_resonance {
+  today = date.weekday()  // e.g. "Monday"
+
+  match today {
+    "Sunday" => {
+      color: "red_black"
+      tone: 396.0
+      principle: "Cause and Effect"
+      virtue: "Discernment & Openness"
+      load_grid: "json/sunday.json"
+      println("Paths open. Crossroads speak. Àṣẹ.")
+    }
+    "Monday" => {
+      color: "red_white"
+      tone: 288.0
+      principle: "Polarity"
+      virtue: "Strength with Compassion"
+      load_grid: "json/monday.json"
+      println("Fire rises. Justice strikes. Àṣẹ.")
+    }
+    "Tuesday" => {
+      color: "yellow_gold"
+      tone: 528.0
+      principle: "Rhythm"
+      virtue: "Radiance, Tender Openness"
+      load_grid: "json/tuesday.json"
+      println("Sweetness flows. Beauty draws. Àṣẹ.")
+    }
+    "Wednesday" => {
+      color: "blue_white"
+      tone: 639.0
+      principle: "Cause and Effect"
+      virtue: "Compassion and Emotional Maturity"
+      load_grid: "json/wednesday.json"
+      println("Ocean holds. Wisdom heals. Àṣẹ.")
+    }
+    "Thursday" => {
+      color: "burgundy_purple"
+      tone: 741.0
+      principle: "Vibration"
+      virtue: "Courage and Self-Transformation"
+      load_grid: "json/thursday.json"
+      println("Storm dances. Change awakens. Àṣẹ.")
+    }
+    "Friday" => {
+      color: "dark_green_black"
+      tone: 852.0
+      principle: "Cause and Effect"
+      virtue: "Dedication, Focus, Mastery"
+      load_grid: "json/friday.json"
+      println("Iron forges. Mastery builds. Àṣẹ.")
+    }
+    "Saturday" => {
+      color: "white_crystal"
+      tone: 963.0
+      principle: "The All is Mind"
+      virtue: "Humility, Wisdom, Sacred Rest"
+      load_grid: "json/saturday.json"
+      println("I am still. Divine mind breathes. Àṣẹ.")
+    }
+  }
+
+  // Optional: on-demand trigger (e.g. user says "invoke crypto")
+  if contains("crypto", "token", "blockchain") {
+    load_on_demand: "crypto_sector"
+  }
+}
