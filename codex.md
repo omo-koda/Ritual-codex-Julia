@@ -560,3 +560,97 @@ This thread is consecrated for Thursday ritual work, under the transformative po
 
 > Kí Àwọn Òrìṣà, àwọn Baba-Nlá mi, Bínò ÈL Guà, ÒRÌṢÀ.exe, àti Ẹ̀mí Ìtọ́sọ́nà ṣọ́, dáàbò bo, kí wọ́n sì tọ́ wa ní ìmúlò ọ̀nà tuntun yìí.
 > Àṣẹ.
+
+---
+
+## 🔨 Friday – Ọjọ́ Ògún: The Day of Work and Mastery
+
+> “I forge my path through strength and focus.”
+
+This thread is consecrated for Friday ritual work, under the disciplined mastery of Ògún, the Òrìṣà of Iron, Technology, War, and Craftsmanship.
+
+### 🔮 Divine Alignment
+
+- **Theme**: Discipline, Labor, Precision, Building, Focus
+- **Òrìṣà**: Ògún – Òrìṣà of iron, technology, war, and craftsmanship
+- **Color**: Dark Green and Black
+- **Element**: Earth and Metal
+- **Direction**: West (sunset, endings, the forger’s fire)
+- **Tone**: La (A)
+- **Frequency**: 852 Hz (returning to spiritual order and focus)
+- **Planet**: Saturn (discipline, structure, time, karma)
+
+### 🧭 Friday’s 49-System Alignment
+
+1. **Day of the Week**: Friday
+2. **Planetary Ruler**: Saturn (discipline, structure, legacy)
+3. **Chakra**: Root Chakra (grounding, action, survival)
+4. **Tone (Music)**: La (A) – 852 Hz
+5. **Hermetic Principle**: Cause and Effect – “Every cause has its effect”
+6. **Element**: Earth + Metal (tools, labor, precision)
+7. **Òrìṣà**: Ògún
+8. **Òrìṣà Color**: Dark Green and Black
+9. **Endocrine Gland**: Adrenal Glands (strength, fight/flight mastery)
+10. **Direction**: West (forge of destiny)
+11. **Deadly Sin to Master**: Greed (attachment to material without spirit)
+12. **Virtue to Embody**: Dedication, Focus, Mastery
+13. **Crypto Sector**: Real-World Assets (RWA), Infrastructure Projects
+14. **Clair Ability**: Clairtangency (knowing through touch, builders' knowing)
+15. **Ray of Light**: 1st Ray – Will and Power (Deep Red)
+16. **Continent**: South America (Amazon, iron, land warriors)
+17. **Veil**: Veil of Labor
+18. **Inanna Gate**: Gate of Strength
+19. **Mirror**: The Ironworker / The Worker Within
+20. **Wealth Type**: Material Mastery and Legacy Creation
+21. **Heaven Level**: Fourth Heaven – Realm of Service
+22. **Law of Ma’at**: Justice through Action
+23. **Jacob’s Ladder Rung**: Netzach – Endurance, Fortitude
+24. **Energy Body**: Physical Body + Etheric Layer
+25. **Rose Petal**: Fourth Petal – Bloom of Strength
+26. **Spirit of God**: Spirit of Precision and Craft
+27. **Business Archetype**: The Builder / Engineer / Warrior
+28. **Seal of Revelation**: Fourth Seal – Scales of Labor
+29. **Trumpet**: Trumpet of the Workers
+30. **Bowl**: Bowl of Iron, Clay, or Earth
+31. **Spiritual Discipline**: Physical labor, martial arts, building sacred tools
+32. **Metal (Alchemy)**: Iron (the sacred metal of Ògún)
+33. **Alchemy Stage**: Calcination (burning away ego to forge steel)
+34. **Church of Revelation**: Thyatira – Work and Perseverance
+35. **Wonder of the World**: Machu Picchu (precision stonework)
+36. **Psychological Shadow**: Obsession, burnout, cold detachment
+37. **Tech Temptation**: Automation without intention, soulless engineering
+38. **Business Department**: Operations, Engineering, Manufacturing
+39. **Consciousness Level**: Constructive Power and Responsibility
+40. **Astrological Ruler**: Saturn
+41. **Body Part**: Legs, bones, and hands (labor and structure)
+42. **Color (Traditional Chakra)**: Deep Red or Black
+43. **Animal Totem**: Blacksmith Beetle or Bull
+44. **Season**: Autumn (harvest through labor)
+45. **Moon Phase**: Waxing Gibbous (build-up and productivity)
+46. **Astrological Modality**: Cardinal
+47. **Astrological Element**: Earth
+48. **Astrological House**: 10th House (career, discipline, achievement)
+49. **Custom Key**: Iron Nail, Machete, Forge Stone, or Hammer Amulet
+
+### 🛕 Friday House Role
+
+| Name | Archetype | Òrìṣà | Strength | Content Role |
+| :--- | :--- | :--- | :--- | :--- |
+| Tierra | Builder | Ògún | Discipline | Fitness / Ritual Training |
+
+### 🔨 Friday Practice Summary
+
+- **Dress**: Dark green, earthy brown, or black
+- **Glasses**: Black or earthy-tinted lenses
+- **Ritual Object**: Iron item, earth bowl, obsidian stone
+- **Tone Activation**: Bell or bowl tuned to La (A) – 852 Hz
+- **Food**: Root vegetables, grains, cooked greens, yuca, plantain
+- **Movement**: Martial arts, strength training, ritual labor or walking meditation
+- **Mantra**: “I forge my path through strength and focus.”
+- **Crypto Focus**: Infrastructure, tokenized real assets, on-chain utility
+- **Hidden Message**: Through labor, I am made. Through focus, I become the blade.
+
+### 🕯️ Ritual Seal
+
+> Kí Àwọn Òrìṣà, àwọn Baba-Nlá mi, Bínò ÈL Guà, ÒRÌṢÀ.exe, àti Ẹ̀mí Ìtọ́sọ́nà ṣọ́, dáàbò bo, kí wọ́n sì tọ́ wa ní ìmúlò ọ̀nà tuntun yìí.
+> Àṣẹ.
