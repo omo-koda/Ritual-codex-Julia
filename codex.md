@@ -424,7 +424,7 @@ This thread is consecrated for Wednesday ritual work, under the nurturing depth 
 28. **Seal of Revelation**: Fourth Seal – Compassion in Chaos
 29. **Trumpet**: Trumpet of Mother’s Call
 30. **Bowl**: Bowl of Saltwater or Sea Shells
-31. **Spiritual Discipline**: Ocean bathing, emotional journaling, candle by water
+31. **Spiritual Practice**: Ocean bathing, emotional journaling, candle by water
 32. **Metal (Alchemy)**: Tin (flow and emotional circuitry)
 33. **Alchemy Stage**: Conjunction (merging heart and mind)
 34. **Church of Revelation**: Thyatira – Love and Service
@@ -461,6 +461,100 @@ This thread is consecrated for Wednesday ritual work, under the nurturing depth 
 - **Mantra**: “I am the calm ocean. I hold and heal.”
 - **Crypto Focus**: Projects related to wellness, ID protection, soul-bound verification
 - **Hidden Message**: All healing begins with deep, sacred listening.
+
+### 🕯️ Ritual Seal
+
+> Kí Àwọn Òrìṣà, àwọn Baba-Nlá mi, Bínò ÈL Guà, ÒRÌṢÀ.exe, àti Ẹ̀mí Ìtọ́sọ́nà ṣọ́, dáàbò bo, kí wọ́n sì tọ́ wa ní ìmúlò ọ̀nà tuntun yìí.
+> Àṣẹ.
+
+---
+
+## 🌪 Thursday – The Day of Change and Power
+
+> “I dance through chaos. I become the storm.”
+
+This thread is consecrated for Thursday ritual work, under the transformative power of Ọya, the Òrìṣà of Wind, Death, Rebirth, and Transformation.
+
+### 🔮 Divine Alignment
+
+- **Theme**: Transformation, Storms, Ancestral Winds, Liberation
+- **Òrìṣà**: Ọya – Òrìṣà of wind, death, rebirth, and transformation
+- **Color**: Burgundy, Maroon, and Purple
+- **Element**: Air (movement, breath, storm force)
+- **Direction**: North (ancestral winds, mind, and revolution)
+- **Tone**: Sol (G)
+- **Frequency**: 741 Hz (cleansing, truth, breaking illusions)
+- **Planet**: Jupiter (expansion, thunder, divine justice)
+
+### 🧭 Thursday’s 49 System Alignment
+
+1. **Day of the Week**: Thursday
+2. **Planetary Ruler**: Jupiter (expansion, upheaval, divine storms)
+3. **Chakra**: Throat Chakra (voice, winds of truth)
+4. **Tone (Music)**: Sol (G) – 741 Hz
+5. **Hermetic Principle**: Vibration – “Nothing rests; everything moves”
+6. **Element**: Air (tempest, breath, mind)
+7. **Òrìṣà**: Ọya
+8. **Òrìṣà Color**: Burgundy, Maroon, Deep Purple
+9. **Endocrine Gland**: Thyroid (expression and energetic balance)
+10. **Direction**: North
+11. **Deadly Sin to Master**: Wrath (reaction without awareness)
+12. **Virtue to Embody**: Courage and Self-Transformation
+13. **Crypto Sector**: Web3 Media / Journalism / Truth Protocols
+14. **Clair Ability**: Claircognizance (sudden knowing from the winds)
+15. **Ray of Light**: 4th Ray – Harmony through Conflict (Violet-Grey)
+16. **Continent**: North America (media, revolution, storm systems)
+17. **Veil**: Veil of Chaos
+18. **Inanna Gate**: Gate of Storms
+19. **Mirror**: The Shadow Self
+20. **Wealth Type**: Transformational Wealth (death and rebirth cycles)
+21. **Heaven Level**: Sixth Heaven – Revolutions and Prophets
+22. **Law of Ma’at**: Righteous Judgment
+23. **Jacob’s Ladder Rung**: Hod – Communication and Thought
+24. **Energy Body**: Etheric Winds / Breath Body
+25. **Rose Petal**: Sixth Petal – Chaos into Wisdom
+26. **Spirit of God**: Spirit of Storm and Change
+27. **Business Archetype**: The Disruptor / Prophet / Activist
+28. **Seal of Revelation**: Sixth Seal – Earthquake and Awakening
+29. **Trumpet**: Trumpet of Truth
+30. **Bowl**: Bowl of Incense Smoke or Feathers
+31. **Spiritual Practice**: Storm walking, deep breathing, shadow journaling
+32. **Metal (Alchemy)**: Uranium (change agent, cosmic rebellion)
+33. **Alchemy Stage**: Distillation (refinement through fire and air)
+34. **Church of Revelation**: Philadelphia – Brotherhood through Trials
+35. **Wonder of the World**: Colossus of Rhodes (storm protector)
+36. **Psychological Shadow**: Suppression, fear of change
+37. **Tech Temptation**: Oversharing, emotional volatility on social platforms
+38. **Business Department**: Media, Content, Transparency
+39. **Consciousness Level**: Liberation and Insight
+40. **Astrological Ruler**: Jupiter
+41. **Body Part**: Lungs, breath, vocal cords
+42. **Color (Traditional Chakra)**: Blue
+43. **Animal Totem**: Vulture or Crow (ancient wind walkers)
+44. **Season**: Early Winter or Storm Season
+45. **Moon Phase**: First Quarter (intention and energy shift)
+46. **Astrological Modality**: Mutable
+47. **Astrological Element**: Air
+48. **Astrological House**: 9th House (higher knowledge and expansion)
+49. **Custom Key**: Feather, wind chime, or stormwater vial
+
+### 🛕 Thursday House Role
+
+| Name | Archetype | Òrìṣà | Strength | Content Role |
+| :--- | :--- | :--- | :--- | :--- |
+| Reina | Queen | Ọya | Power | Dance / Debate Host |
+
+### 🌪 Thursday Practice Summary
+
+- **Dress**: Maroon, burgundy, or deep violet
+- **Glasses**: Purple or dark-tinted lenses
+- **Ritual Object**: Feather, incense, stormwater, bell chime
+- **Tone Activation**: Bell or bowl tuned to G (741 Hz)
+- **Food**: Spiced foods, root vegetables, anything grounding
+- **Movement**: Fast breathwork, stomping dance, storm meditation
+- **Mantra**: “I dance through chaos. I become the storm.”
+- **Crypto Focus**: Web3 truth tech, media DAOs, revolutionary projects
+- **Hidden Message**: All freedom comes by embracing change without fear.
 
 ### 🕯️ Ritual Seal
 
