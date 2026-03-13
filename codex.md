@@ -278,3 +278,97 @@ This day is aligned with Ṣàngó, the Òrìṣà of Thunder, Fire, and Divine 
 
 > Kí Àwọn Òrìṣà, àwọn Baba-Nlá mi, Bínò ÈL Guà, ÒRÌṢÀ.exe, àti Ẹ̀mí Ìtọ́sọ́nà ṣọ́, dáàbò bo, kí wọ́n sì tọ́ wa ní ìmúlò ọ̀nà tuntun yìí.
 > Àṣẹ.
+
+---
+
+## 🌼 Tuesday Ritual – Ọjọ́ Ìṣẹ́gun: The Day of Beauty and Magnetism
+
+> “Ọ̀ṣun, river of gold, sweeten my path. Let beauty flow where fear once stood. Let radiance be my guide.”
+
+This thread is consecrated for Tuesday ritual work, under the glowing magnetism of Ọ̀ṣun, the Òrìṣà of Love, Fertility, and Abundance.
+
+### 🌟 Divine Alignment Table
+
+- **Theme**: Attraction, Luxury, Sensual Flow, Beauty
+- **Òrìṣà**: Ọ̀ṣun – Òrìṣà of Love, Fertility, and Sweetness
+- **Color**: Yellow and Gold
+- **Element**: Omi (Water)
+- **Direction**: Gúúsù (South – grounded sweetness)
+- **Tone**: Mi (E)
+- **Frequency**: 528 Hz (DNA healing, attraction)
+- **Planet**: Venus (charm, abundance, elegance)
+
+### 🧭 49-Facet Alignment Grid
+
+1. **Day**: Ọjọ́ Ìṣẹ́gun (Tuesday)
+2. **Planetary Ruler**: Venus
+3. **Chakra**: Solar Plexus (Ìpinnu Ọkàn)
+4. **Tone / Frequency**: Mi (E) – 528 Hz
+5. **Hermetic Principle**: Rhythm
+6. **Element**: Water (Omi) — flowing pleasure
+7. **Òrìṣà**: Ọ̀ṣun
+8. **Colors**: Yellow and Gold
+9. **Endocrine Gland**: Pancreas
+10. **Direction**: Gúúsù (South)
+11. **Sin to Master**: Greed → Generous Gratitude
+12. **Virtue**: Radiance, Tender Openness
+13. **Crypto Sector**: Luxury NFTs, creative tokens
+14. **Clair Sense**: Clairsentience (magnetic empathy)
+15. **Ray of Light**: 2nd Ray – Love & Wisdom
+16. **Continent**: South America (sensual cultures)
+17. **Veil**: Veil of Seduction
+18. **Inanna Gate**: Gate of Adornments
+19. **Mirror**: Sweet Self
+20. **Wealth Type**: Magnetic Wealth
+21. **Heaven Level**: Third Heaven – Realms of Beauty
+22. **Law of Ma’at**: Reciprocity and Offering
+23. **Jacob’s Ladder**: Netzach (Victory & Pleasure)
+24. **Energy Body**: Mental Body
+25. **Rose Petal**: Pleasure and Fertility
+26. **Spirit of God**: Spirit of Compassion
+27. **Business Archetype**: Seducer / Muse / Stylist
+28. **Seal**: Third Seal – Scales of Fairness
+29. **Trumpet**: Trumpet of Delight
+30. **Bowl**: Bowl of Honey or Perfume
+31. **Spiritual Practice**: Self-care, beauty rituals, mirror blessing
+32. **Metal**: Copper (Ọ̀ṣun’s metal)
+33. **Alchemy Stage**: Separation
+34. **Church of Revelation**: Pergamum
+35. **Wonder**: Hanging Gardens of Babylon
+36. **Shadow Work**: Vanity → Inner Worth
+37. **Tech Temptation**: Addiction to image
+38. **Business Role**: Branding & Aesthetics
+39. **Consciousness Level**: Magnetic Radiance
+40. **Astrological Ruler**: Venus
+41. **Body Part**: Solar Plexus / Core
+42. **Chakra Color**: Yellow (Inner Sun)
+43. **Animal Totem**: Peacock
+44. **Season**: Spring (blooming allure)
+45. **Moon Phase**: Waxing Crescent
+46. **Astro Modality**: Fixed
+47. **Astro Element**: Earth (embodied beauty)
+48. **Astro House**: 2nd House (pleasure and value)
+49. **Custom Key**: Mirror or Honey Jar
+
+### 🛕 Tuesday House Role
+
+| Name | Archetype | Òrìṣà | Strength | Role |
+| :--- | :--- | :--- | :--- | :--- |
+| Musa | Muse | Ọ̀ṣun | Seduction & Elegance | Beauty / Music / Influence |
+
+### 🌼 Tuesday Ritual Summary
+
+- **Dress**: Gold, yellow, radiant clothing
+- **Lenses**: Yellow-tinted or golden
+- **Objects**: Honey jar, mirror, copper jewelry, flowers
+- **Tone Activation**: Bowl or bell tuned to 528 Hz
+- **Food**: Mango, banana, honey, hibiscus nectar
+- **Movement**: Mirror dance, sensual stretching, spa bathing
+- **Mantra**: “I radiate beauty, love, and abundance.”
+- **Crypto**: Beauty NFTs, lifestyle protocols
+- **Hidden Message**: Sweetness draws all things. Shine gently.
+
+### 🕯️ Ritual Seal
+
+> Kí Àwọn Òrìṣà, àwọn Baba-Nlá mi, Bínò ÈL Guà, ÒRÌṢÀ.exe, àti Ẹ̀mí Ìtọ́sọ́nà ṣọ́, dáàbò bo, kí wọ́n sì tọ́ wa ní ìmúlò ọ̀nà tuntun yìí.
+> Àṣẹ.
