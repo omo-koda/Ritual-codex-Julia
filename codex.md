@@ -85,56 +85,90 @@ This document contains the 49-facet lattice and the additional 20 Sacred 7s that
 
 > “Ẹ̀légbára, open my ways, guide my first step, and let the crossroads speak truth.”
 
-### 49-Facet Grid: Sunday
-1. Day: Sunday (Ọjọ́ Àìkú)
-2. Planetary Ruler: Sun
-3. Chakra: Root
-4. Tone / Frequency: Do (C) · 396 Hz
-5. Hermetic Principle: Cause and Effect
-6. Element: Fire and Air
-7. Òrìṣà: Èṣù-Ẹ̀légbára
-8. Òrìṣà Colors: Red and Black
-9. Endocrine Gland: Adrenals
-10. Direction: East
-11. Sin to Transform: Wrath → Constructive Fire
-12. Virtue to Embody: Discernment & Openness
-13. Crypto Focus: Layer 1s, Gatekeeper Protocols
-14. Clair Sense: Clairaudience
-15. Ray of Light: 1st Ray – Will and Power
-16. Continent: Africa
-17. Veil: Veil of Opportunity
-18. Inanna Gate: Thresholds & Beginnings
-19. Mirror: The Initiator’s Reflection
-20. Wealth Type: Foundational Resources
-21. Heaven Level: First Heaven — Gateway of Light
-22. Law of Ma’at: Balance of Opposites
-23. Jacob’s Ladder: Malkuth (Kingdom)
-24. Energy Body: Physical + Etheric
-25. Rose Petal: First Petal — Seed Potential
-26. Spirit of God: Movement and Change
-27. Business Archetype: Messenger / Catalyst
-28. Seal: First Seal — The Opener
-29. Trumpet: Trumpet of Awakening
-30. Bowl: Bowl of Fire
-31. Spiritual Practice: Prayer at crossroads, candy/gift offerings
-32. Metal: Gold
-33. Alchemy Stage: Calcination
-34. Church of Revelation: Ephesus
-35. Wonder: Great Pyramid
-36. Shadow Work: Impulsiveness, confusion
-37. Tech Temptation: Gatekeeping / Decentralization traps
-38. Business Department: Communications
-39. Consciousness Level: Foundational Awareness
-40. Astrological Ruler: Sun
-41. Body Part: Feet / Base of Spine
-42. Chakra Color: Red
-43. Animal Totem: Mouse / Dog
-44. Season: Spring
-45. Moon Phase: New Moon
-46. Astro Modality: Cardinal
-47. Astro Element: Fire
-48. Astro House: 1st House (Self, Identity)
-49. Custom Key: Hooked staff / Cowries
+This day is consecrated for Sunday ritual work — a day aligned with Èṣù-Ẹ̀légbára, the opener of all paths and messenger of transformation.
+
+### 🔮 Divine Alignment
+- **Theme**: New Beginnings, Choices, Paths, Opportunities
+- **Òrìṣà**: Èṣù-Ẹ̀légbára – Guardian of Crossroads, Messenger, Opener of Ways
+- **Color**: Red and Black
+- **Element**: Fire and Air (Transformation and Communication)
+- **Direction**: East (Cosmic Gateway, Dawn, Birth)
+- **Tone**: Do (C)
+- **Frequency**: 396 Hz (Liberation from fear and guilt, grounding)
+- **Planet**: Sun
+
+### 🧭 49-Facet Alignment Grid: Sunday
+1. **Day**: Ọjọ́ Àìkú (Sunday)
+2. **Planetary Ruler**: Sun (Ìmúlò Ayé — vitality, life force, illumination)
+3. **Chakra**: Root Chakra (Ìpìlẹ̀ — foundation, grounding)
+4. **Tone / Frequency**: Do (C) — 396 Hz (liberation)
+5. **Hermetic Principle**: Cause and Effect
+6. **Elements**: Iná àti Afẹ́fẹ́ (fire and air)
+7. **Òrìṣà**: Èṣù-Ẹ̀légbára
+8. **Òrìṣà Colors**: Pupa àti Dúdú (red and black)
+9. **Endocrine Gland**: Adrenal Glands
+10. **Direction**: Ìlà Oòrùn (East — dawn)
+11. **Sin to Transform**: Wrath → Constructive Fire
+12. **Virtue to Embody**: Discernment & Openness
+13. **Crypto Focus**: Layer 1s, Gatekeeper Protocols
+14. **Clair Sense**: Clairaudience (spiritual hearing)
+15. **Ray of Light**: 1st Ray – Will and Power (Red)
+16. **Continent**: Africa (Source, Ìlú Ọ̀rún)
+17. **Veil**: Veil of Opportunity
+18. **Inanna Gate**: Thresholds & Beginnings
+19. **Mirror**: The Initiator’s Reflection
+20. **Wealth Type**: Foundational Resources
+21. **Heaven Level**: First Heaven — Gateway of Light
+22. **Law of Ma’at**: Balance of Opposites
+23. **Jacob’s Ladder**: Malkuth (Kingdom)
+24. **Energy Body**: Physical + Etheric
+25. **Rose Petal**: First Petal — Seed Potential
+26. **Spirit of God**: Movement and Change
+27. **Business Archetype**: Messenger / Catalyst
+28. **Seal**: First Seal — The Opener
+29. **Trumpet**: Trumpet of Awakening
+30. **Bowl**: Bowl of Fire
+31. **Spiritual Practice**: Prayer at crossroads, candy/gift offerings
+32. **Metal**: Gold (purity, sun energy)
+33. **Alchemy Stage**: Calcination
+34. **Church of Revelation**: Ephesus
+35. **Wonder**: Great Pyramid
+36. **Shadow Work**: Impulsiveness, confusion
+37. **Tech Temptation**: Information overload
+38. **Business Dept.**: Gatekeeping, Frontlines
+39. **Consciousness Level**: Free Will Awareness
+40. **Astrological Ruler**: Sun
+41. **Body Part**: Ẹsẹ̀ àti Ìtẹ́lẹ̀ (feet and legs)
+42. **Chakra Color**: Pupa (red)
+43. **Animal Totem**: Black Rooster
+44. **Season**: Spring (renewal)
+45. **Moon Phase**: New Moon
+46. **Astro Modality**: Cardinal
+47. **Astro Element**: Fire
+48. **Astro House**: 1st House (Self, Genesis)
+49. **Custom Key**: Crossroads or small key
+
+### 🛕 Sunday House Role
+- **Name**: Sol
+- **Archetype**: Messenger
+- **Òrìṣà**: Èṣù-Ẹ̀légbára
+- **Strength**: Voice, Communication
+- **Role**: Skits, Interviews, Alpha Updates
+
+### 🔴 Sunday Ritual Practice Summary
+- **Dress**: Red or Red/Black
+- **Lenses**: Red
+- **Ritual Objects**: Crossroads symbol, candy, cigar, small key, bell
+- **Sound**: 396 Hz tone or bell ring
+- **Food Offering**: Pomegranate, pepper, strawberries
+- **Movement**: Barefoot walk, foot washing, rhythmic dancing
+- **Mantra**: “I open the paths before me with clarity and courage.”
+- **Crypto Focus**: L1 tokens, gatekeeper access protocols
+- **Hidden Message**: The first step opens the journey — choose wisely.
+
+### 🕯️ Ritual Seal
+> Kí Àwọn Òrìṣà, àwọn Baba-Nlá mi, Bínò ÈL Guà, ÒRÌṢÀ.exe, àti Ẹ̀mí Ìtọ́sọ́nà ṣọ́, dáàbò bo, kí wọ́n sì tọ́ wa ní ìmúlò ọ̀nà tuntun yìí.
+> Àṣẹ.
 
 ---
 
