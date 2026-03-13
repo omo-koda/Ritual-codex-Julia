@@ -176,53 +176,91 @@ This day is consecrated for Sunday ritual work — a day aligned with Èṣù-�
 
 > “Ṣàngó, King of Fire, strike with justice, burn away falsehood, awaken divine strength within me.”
 
-### 49-Facet Grid: Monday (Ṣàngó Map)
-1. Day: Monday (Ọjọ́ Ajé)
-2. Planetary Ruler: Mars
-3. Chakra: Sacral
-4. Tone / Frequency: Re (D) · 288 Hz
-5. Hermetic Principle: Polarity
-6. Element: Fire (Iná)
-7. Òrìṣà: Ṣàngó
-8. Òrìṣà Colors: Red and White
-9. Endocrine Gland: Gonads
-10. Direction: Southeast
-11. Sin to Transform: Pride → Courageous Humility
-12. Virtue to Embody: Strength with Compassion
-13. Crypto Focus: DeFi / Power Protocols
-14. Clair Sense: Clairsentience
-15. Ray of Light: 6th Ray – Devotion & Idealism
-16. Continent: North America
-17. Veil: Veil of Will
-18. Inanna Gate: Gate of Passion and Courage
-19. Mirror: Warrior’s Flame
-20. Wealth Type: Empire Wealth
-21. Heaven Level: 2nd – Domain of Might
-22. Law of Ma’at: Divine Justice
-23. Jacob’s Ladder: Hod (Discipline & Glory)
-24. Energy Body: Emotional Field
-25. Rose Petal: Fire of Creation
-26. Spirit of God: Spirit of Divine Judgment
-27. Business Archetype: Executive / Ruler
-28. Seal: Second Seal – War & Conflict
-29. Trumpet: Trumpet of Judgment
-30. Bowl: Bowl of Flames
-31. Spiritual Practice: Fire offerings, candle rituals, truth invocation
-32. Metal: Iron
-33. Alchemy Stage: Dissolution
-34. Church of Revelation: Smyrna
-35. Wonder: Colossus of Rhodes
-36. Shadow Work: Arrogance → Disciplined Strength
-37. Tech Temptation: Power Hoarding
-38. Business Department: Executive Command
-39. Consciousness Level: Controlled Power
-40. Astrological Ruler: Mars
-41. Body Part: Hips / Sexual Fire
-42. Chakra Color: Òsán (Orange)
-43. Animal Totem: Lion
-44. Season: Summer
-45. Moon Phase: First Quarter
-46. Astro Modality: Fixed
-47. Astro Element: Fire
-48. Astro House: 10th (Leadership, Destiny)
-49. Custom Key: Double Axe / ⚡
+This day is aligned with Ṣàngó, the Òrìṣà of Thunder, Fire, and Divine Judgment — a day to embody power with discipline, to ignite will with clarity, and to lead with sacred courage.
+
+### 🔮 Divine Alignment
+- **Theme**: Strength, Leadership, Fire, Action
+- **Òrìṣà**: Ṣàngó – Orisha of Thunder, Fire, and Justice
+- **Color**: Red and White
+- **Element**: Fire (Iná)
+- **Direction**: Southeast (Power rising from root toward transformation)
+- **Tone**: Re (D)
+- **Frequency**: 288 Hz (Energetic momentum)
+- **Planet**: Mars (traditional) / Moon (modern) – Mars chosen
+- **Chakra**: Sacral × Solar
+- **Orisha Type**: Core Òrìṣà
+- **Role**: King · Warrior · Judge · Thunder Caller
+- **Archetype**: Warrior × Divine Enforcer
+
+### 🧭 49-Facet Alignment Grid: Monday (Ṣàngó Map)
+1. **Day**: Monday (Ọjọ́ Ajé)
+2. **Planetary Ruler**: Mars
+3. **Chakra**: Sacral
+4. **Tone / Frequency**: Re (D) · 288 Hz
+5. **Hermetic Principle**: Polarity
+6. **Element**: Fire (Iná)
+7. **Òrìṣà**: Ṣàngó
+8. **Òrìṣà Colors**: Red and White
+9. **Endocrine Gland**: Gonads
+10. **Direction**: Southeast
+11. **Sin to Transform**: Pride → Courageous Humility
+12. **Virtue to Embody**: Strength with Compassion
+13. **Crypto Focus**: DeFi / Power Protocols
+14. **Clair Sense**: Clairsentience
+15. **Ray of Light**: 6th Ray – Devotion & Idealism
+16. **Continent**: North America
+17. **Veil**: Veil of Will
+18. **Inanna Gate**: Gate of Passion and Courage
+19. **Mirror**: Warrior’s Flame
+20. **Wealth Type**: Empire Wealth
+21. **Heaven Level**: 2nd – Domain of Might
+22. **Law of Ma’at**: Divine Justice
+23. **Jacob’s Ladder**: Hod (Discipline & Glory)
+24. **Energy Body**: Emotional Field
+25. **Rose Petal**: Fire of Creation
+26. **Spirit of God**: Spirit of Divine Judgment
+27. **Business Archetype**: Executive / Ruler
+28. **Seal**: Second Seal – War & Conflict
+29. **Trumpet**: Trumpet of Judgment
+30. **Bowl**: Bowl of Flames
+31. **Spiritual Practice**: Fire offerings, candle rituals, truth invocation
+32. **Metal**: Iron
+33. **Alchemy Stage**: Dissolution
+34. **Church of Revelation**: Smyrna
+35. **Wonder**: Colossus of Rhodes
+36. **Shadow Work**: Arrogance → Disciplined Strength
+37. **Tech Temptation**: Power Hoarding
+38. **Business Department**: Executive Command
+39. **Consciousness Level**: Controlled Power
+40. **Astrological Ruler**: Mars
+41. **Body Part**: Hips / Sexual Fire
+42. **Chakra Color**: Òsán (Orange)
+43. **Animal Totem**: Lion
+44. **Season**: Summer
+45. **Moon Phase**: First Quarter
+46. **Astro Modality**: Fixed
+47. **Astro Element**: Fire
+48. **Astro House**: 10th (Leadership, Destiny)
+49. **Custom Key**: Double Axe / ⚡
+
+### 🛕 Monday House Role
+- **Name**: Reina
+- **Archetype**: Queen
+- **Òrìṣà**: Ṣàngó
+- **Power**: Power
+- **Role**: Debate Host, Dance Leader
+
+### 🔥 Monday Ritual Practice Summary
+- **Dress Code**: Red and White clothing
+- **Lenses**: Red-orange ritual lenses or filtered light
+- **Objects**: Double axe, thunder drums, red candles
+- **Sound Activation**: Bell or drum tuned to 288 Hz
+- **Food Offerings**: Ginger, spicy foods, hibiscus
+- **Movement**: Fire dancing, warrior poses, power breath
+- **Mantra**: “I move with divine strength and execute justice with fire.”
+- **Crypto Focus**: Layer 2s · Governance · DeFi
+- **Hidden Message**: All power must serve divine justice
+
+### 🕯️ Ritual Seal
+> Kí Àwọn Òrìṣà, àwọn Baba-Nlá mi, Bínò ÈL Guà, ÒRÌṢÀ.exe, àti Ẹ̀mí Ìtọ́sọ́nà ṣọ́, dáàbò bo, kí wọ́n sì tọ́ wa ní ìmúlò ọ̀nà tuntun yìí.
+> Àṣẹ.

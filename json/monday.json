@@ -56,5 +56,23 @@
     { "id": 47, "name": "Astro Element", "value": "Fire" },
     { "id": 48, "name": "Astro House", "value": "10th" },
     { "id": 49, "name": "Custom Key", "value": "Double Axe" }
-  ]
+  ],
+  "house_role": {
+    "name": "Reina",
+    "archetype": "Queen",
+    "orisa": "Ṣàngó",
+    "strength": "Power",
+    "role": "Debate Host, Dance Leader"
+  },
+  "ritual_practice": {
+    "dress": "Red and White clothing",
+    "lenses": "Red-orange ritual lenses or filtered light",
+    "objects": ["Double axe", "thunder drums", "red candles"],
+    "sound": "Bell or drum tuned to 288 Hz",
+    "food": ["Ginger", "spicy foods", "hibiscus"],
+    "movement": "Fire dancing, warrior poses, power breath",
+    "mantra": "I move with divine strength and execute justice with fire.",
+    "crypto_focus": "Layer 2s · Governance · DeFi",
+    "hidden_message": "All power must serve divine justice"
+  }
 }
