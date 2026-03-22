@@ -162,3 +162,7 @@ The Ritual Codex feeds into:
 ## License
 
 Built for Technosis & Ọmọ Kọ́dà. Àṣẹ. 🤍🗿
+
+
+---
+**Note:** The primary branch for this repository is now `main`.
