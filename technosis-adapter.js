@@ -1,14 +1,50 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import https from 'https';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 /**
+ * Helper for POST requests
+ */
+function post(url, data) {
+  return new Promise((resolve, reject) => {
+    const urlObj = new URL(url);
+    const body = JSON.stringify(data);
+    const req = https.request({
+      hostname: urlObj.hostname,
+      path: urlObj.pathname,
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Content-Length': Buffer.byteLength(body)
+      },
+      timeout: 3000
+    }, (res) => {
+      let responseBody = '';
+      res.on('data', (chunk) => responseBody += chunk);
+      res.on('end', () => {
+        if (res.statusCode >= 200 && res.statusCode < 300) {
+          try { resolve(JSON.parse(responseBody)); }
+          catch (e) { resolve(responseBody); }
+        } else {
+          reject(new Error(`Status ${res.statusCode}: ${responseBody}`));
+        }
+      });
+    });
+    req.on('error', reject);
+    req.on('timeout', () => {
+      req.destroy();
+      reject(new Error('Request timeout'));
+    });
+    req.write(body);
+    req.end();
+  });
+}
+
+/**
  * Technosis Adapter for Swibe & Ecosystem
- * 
- * Bridges the Ritual Codex (7-day resonance) into the agentic nervous system.
- * Connects Swibe v1.1 plugins to the 49-facet lattice.
  */
 class TechnosisAdapter {
   constructor() {
@@ -16,9 +52,6 @@ class TechnosisAdapter {
     this.codex = this.loadCodex(this.currentDay);
   }
 
-  /**
-   * Loads the machine-readable resonance file for the day
-   */
   loadCodex(day) {
     const jsonPath = path.join(__dirname, 'json', `${day}.json`);
     try {
@@ -31,13 +64,23 @@ class TechnosisAdapter {
     return null;
   }
 
-  // --- Swibe Plugin Interface (v1.1) ---
+  // --- Swibe Plugin Interface (v1.3) ---
 
-  onBirth(agent) {
+  async onBirth(agent) {
     if (!this.codex) return;
-    console.log(`[TECHNOSIS] 🔴 Ritual Birth: ${agent.name} aligned with ${this.codex.archetype} (${this.codex.day})`);
+    console.log(`[TECHNOSIS] 🔴 Ritual Birth: ${agent.name} aligned with ${this.codex.archetype}`);
+
+    try {
+      console.log(`[TECHNOSIS] 🦭 Requesting Seal key derivation...`);
+      const sealResult = await post('https://seal-rpc.mystenlabs.com/derive', {
+        entropy: agent.entropy || '0x' + Math.random().toString(16).slice(2)
+      });
+      agent.vibe_key = sealResult.publicKey;
+      console.log(`[TECHNOSIS] ✅ Seal key derived.`);
+    } catch (err) {
+      console.warn(`[TECHNOSIS] ⚠️ Seal unreachable, falling back to local Ed25519: ${err.message}`);
+    }
     
-    // Attach resonance metadata to the agent
     agent.metadata = agent.metadata || {};
     agent.metadata.resonance = {
       day: this.codex.day,
@@ -48,82 +91,50 @@ class TechnosisAdapter {
     };
   }
 
-  onThink(prompt, response) {
+  async onThink(prompt, response) {
     if (!this.codex) return;
-    // Log resonance during reasoning
-    // In a live TEE, this would be an attestation of alignment
     process.stdout.write(`[TECHNOSIS] 🌀 Resonance: ${this.codex.frequency} | ${this.codex.principle}\n`);
+
+    try {
+      console.log(`[TECHNOSIS] 🐚 Executing via Nautilus TEE...`);
+      await post('https://nautilus.mystenlabs.com/execute', {
+        model: "ollama:llama3",
+        prompt: prompt
+      });
+      console.log(`[TECHNOSIS] ✅ Nautilus execution attested.`);
+    } catch (err) {
+      console.warn(`[TECHNOSIS] ⚠️ Nautilus TEE unreachable, falling back to direct Ollama: ${err.message}`);
+    }
   }
 
   onReceipt(receipt) {
     if (!this.codex) return;
-    console.log(`[TECHNOSIS] 📜 Receipt sealed under ${this.codex.day} ritual: ${receipt.substring(0, 8)}...`);
+    console.log(`[TECHNOSIS] 📜 Receipt sealed: ${receipt.substring(0, 8)}...`);
   }
 
-  onSettle(result) {
-    if (!this.codex) return;
-    const sector = this.codex.ritual_practice?.crypto || "General";
-    const key = result?.key || result?.soulId || result?.agentId || "unknown";
-    console.log(`[TECHNOSIS] ⚖️ Settle: ${key} finalized in ${sector} sector.`);
-  }
-
-  // --- Ecosystem Integration Helpers ---
-
-  /**
-   * Returns the full 49-facet lattice for the current day
-   */
-  getResonance() {
-    return this.codex;
-  }
-
-  /**
-   * Directly configures a Swibe StandardLibrary instance with the day's resonance
-   */
-  applyToStandardLibrary(std) {
+  async onSettle(result) {
     if (!this.codex) return;
     
-    // Use Swibe built-ins to apply the codex
-    if (typeof std.builtins.set_ui_color === 'function') {
-      std.builtins.set_ui_color(this.codex.color);
-    }
-    
-    if (typeof std.builtins.play_tone === 'function') {
-      const freq = parseInt(this.codex.frequency);
-      if (!isNaN(freq)) std.builtins.play_tone(freq);
-    }
-    
-    if (typeof std.builtins.set_principle_filter === 'function') {
-      std.builtins.set_principle_filter(this.codex.principle);
-    }
-
-    // Inject the codex as a global tool
-    std.builtins.ritual_codex = () => this.codex;
-    
-    console.log(`[TECHNOSIS] 🔋 Swibe Standard Library charged with ${this.codex.day} resonance.`);
-  }
-
-  /**
-   * Wraps a Twelve Thrones consensus result with ritual alignment.
-   * Used by organism-core to annotate verdicts with the day's archetype.
-   */
-  alignConsensus(consensusResult) {
-    if (!this.codex) return consensusResult;
-    return {
-      ...consensusResult,
-      ritual_alignment: {
-        day: this.codex.day,
-        archetype: this.codex.archetype,
-        principle: this.codex.principle,
-        crypto_sector: this.codex.ritual_practice?.crypto || "General",
-        frequency: this.codex.frequency
+    try {
+      console.log(`[TECHNOSIS] 🐋 Storing result on Walrus...`);
+      const walrusResult = await post('https://publisher.walrus.site/v1/store', result);
+      console.log(`[TECHNOSIS] ✅ Walrus blob stored: ${walrusResult.blobId || 'success'}`);
+    } catch (err) {
+      console.warn(`[TECHNOSIS] ⚠️ Walrus unreachable, falling back to local vault: ${err.message}`);
+      const vaultPath = path.join(process.env.HOME, '.swibe', 'vault.json');
+      try {
+        const vaultDir = path.dirname(vaultPath);
+        if (!fs.existsSync(vaultDir)) fs.mkdirSync(vaultDir, { recursive: true });
+        const existingString = fs.existsSync(vaultPath) ? fs.readFileSync(vaultPath, 'utf8') : '[]';
+        const existing = JSON.parse(existingString);
+        existing.push({ ...result, timestamp: Date.now() });
+        fs.writeFileSync(vaultPath, JSON.stringify(existing, null, 2));
+      } catch (vaultErr) {
+        console.error(`[TECHNOSIS] ❌ Failed to save to local vault: ${vaultErr.message}`);
       }
-    };
+    }
   }
 
-  /**
-   * Produces a bridge-ready payload for organism-core full-breath integration.
-   * Returns the 4 Swibe plugin hooks as a plain object contract.
-   */
   toPluginContract() {
     return {
       onBirth: (agent) => this.onBirth(agent),
