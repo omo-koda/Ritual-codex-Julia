@@ -33,15 +33,19 @@ ritual-codex/
 ├── codex.md                    # Full 7-day ritual codex document
 │                                 (49-facet grids + 20 Sacred 7s + all daily rituals)
 ├── json/                       # Machine-readable daily resonance files
-│   ├── sunday.json
-│   ├── monday.json
-│   ├── tuesday.json
-│   ├── wednesday.json
-│   ├── thursday.json
-│   ├── friday.json
-│   └── saturday.json
+│   ├── sunday.json … saturday.json
+├── src/                        # Julia (Ọ̀ṢỌ́VM-native) sacred time system
+│   ├── time/sacred_time.jl     #   BTC anchoring, 5-layer Òrìṣà, ritual gates
+│   ├── calendar/spiral_calendar.jl  # 13-moon year, Jubilee, almanac generation
+│   └── bridge/organism_integration.jl  # Organism-core event bridge
+├── data/
+│   └── year_1_almanac.json     # Generated first-week almanac sample
+├── btc-time.js                 # BTC Time engine — block height as sovereign clock
+├── spiral-calendar.js          # Spiral Calendar — BTC + Gregorian convergence
+├── technosis-adapter.js        # Ecosystem bridge (Swibe v1.1 + Spiral Calendar)
 ├── swibe-skill/                # Swibe automation skill
 │   └── daily_routine.swibe     # Auto-loads daily config at startup
+├── README-SPIRAL.md            # Full spiral calendar documentation
 └── README.md
 ```
 
@@ -142,6 +146,52 @@ Each day maps across 49 dimensions:
 | 49 | Custom Key | User keys for mint_raw hashes |
 
 Plus **20 Sacred 7s** expansion layers (Archangels, Alchemical Stages, Rainbow Colors, Deadly Sins, Heavenly Virtues, etc.)
+
+---
+
+## ⟐ Spiral Calendar + BTC Time
+
+The Spiral Calendar merges **two time streams** — Gregorian (human day) and BTC (block height) — into a single ritual clock.
+
+### Spiral Phases
+
+| Offset | Phase | Meaning |
+|--------|-------|---------|
+| 0 | **Resonance** | Both streams align on the same Òrìṣà — 2× ritual weight |
+| 1 | Echo | Near-alignment, fading harmony |
+| 2 | Drift | Streams diverge |
+| 3 | **Opposition** | Maximum tension — two archetypes in dialogue (0.5× weight) |
+| 4 | Return Drift | Convergence begins |
+| 5 | Return Echo | Approaching alignment |
+| 6 | Mirror | Inverse reflection |
+
+### BTC Time Primitives
+
+- **Block height** → sovereign clock (no wall-clock dependency)
+- **BTC Day** = 144 blocks, **BTC Week** = 1008 blocks
+- **BTC Weekday** maps to the same 7 Òrìṣà cycle
+- **Halving Epochs** map to the 7 alchemical stages
+- **1440-wallet minute slot** = `blockHeight % 1440`
+- **Sabbath** enforced when *either* stream says Saturday (weight → 0)
+
+### Usage
+
+```javascript
+import SpiralCalendar from './spiral-calendar.js';
+
+const spiral = new SpiralCalendar();       // estimates block height
+// const spiral = new SpiralCalendar(893400); // or pass exact height
+
+console.log(spiral.toString());
+// ⟐ RESONANCE [Ọṣun] block:893400 era:Fourth Reduction weight:2x
+
+const snap = spiral.snapshot();
+snap.spiral.phase;           // "Resonance"
+snap.spiral.ritual_weight;   // 2.0
+snap.btc.halving_era;        // 4
+snap.btc.epoch.alchemy;      // "Fermentation"
+snap.gregorian.orisa;        // "Ọṣun"
+```
 
 ---
 

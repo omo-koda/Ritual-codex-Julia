@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import SpiralCalendar from './spiral-calendar.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
@@ -9,11 +10,16 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
  * 
  * Bridges the Ritual Codex (7-day resonance) into the agentic nervous system.
  * Connects Swibe v1.1 plugins to the 49-facet lattice.
+ * Integrates Spiral Calendar (BTC Time + Gregorian convergence).
  */
 class TechnosisAdapter {
-  constructor() {
+  /**
+   * @param {number} [blockHeight] - BTC block height for spiral calendar. Omit to estimate.
+   */
+  constructor(blockHeight) {
     this.currentDay = new Date().toLocaleDateString('en-US', { weekday: 'long' }).toLowerCase();
     this.codex = this.loadCodex(this.currentDay);
+    this.spiral = new SpiralCalendar(blockHeight);
   }
 
   /**
@@ -35,7 +41,9 @@ class TechnosisAdapter {
 
   onBirth(agent) {
     if (!this.codex) return;
+    const spiral = this.spiral.snapshot();
     console.log(`[TECHNOSIS] 🔴 Ritual Birth: ${agent.name} aligned with ${this.codex.archetype} (${this.codex.day})`);
+    console.log(`[TECHNOSIS] ⟐ Spiral: ${this.spiral.toString()}`);
     
     // Attach resonance metadata to the agent
     agent.metadata = agent.metadata || {};
@@ -46,6 +54,9 @@ class TechnosisAdapter {
       color: this.codex.color,
       principle: this.codex.principle
     };
+    agent.metadata.spiral = spiral.spiral;
+    agent.metadata.btc_block = spiral.btc.block_height;
+    agent.metadata.epoch = spiral.epoch;
   }
 
   onThink(prompt, response) {
@@ -64,7 +75,13 @@ class TechnosisAdapter {
     if (!this.codex) return;
     const sector = this.codex.ritual_practice?.crypto || "General";
     const key = result?.key || result?.soulId || result?.agentId || "unknown";
-    console.log(`[TECHNOSIS] ⚖️ Settle: ${key} finalized in ${sector} sector.`);
+    const weight = this.spiral.ritualWeight;
+
+    if (weight === 0) {
+      console.log(`[TECHNOSIS] 🕊 Sabbath freeze — settle deferred for ${key}`);
+      return;
+    }
+    console.log(`[TECHNOSIS] ⚖️ Settle: ${key} in ${sector} sector (weight: ${weight}x)`);
   }
 
   // --- Ecosystem Integration Helpers ---
@@ -74,6 +91,13 @@ class TechnosisAdapter {
    */
   getResonance() {
     return this.codex;
+  }
+
+  /**
+   * Returns the full spiral calendar snapshot (BTC + Gregorian + convergence)
+   */
+  getSpiralTime() {
+    return this.spiral.snapshot();
   }
 
   /**
@@ -108,6 +132,7 @@ class TechnosisAdapter {
    */
   alignConsensus(consensusResult) {
     if (!this.codex) return consensusResult;
+    const spiral = this.spiral.snapshot();
     return {
       ...consensusResult,
       ritual_alignment: {
@@ -115,7 +140,11 @@ class TechnosisAdapter {
         archetype: this.codex.archetype,
         principle: this.codex.principle,
         crypto_sector: this.codex.ritual_practice?.crypto || "General",
-        frequency: this.codex.frequency
+        frequency: this.codex.frequency,
+        spiral_phase: spiral.spiral.phase,
+        btc_block: spiral.btc.block_height,
+        ritual_weight: spiral.spiral.ritual_weight,
+        epoch: spiral.epoch.name
       }
     };
   }
