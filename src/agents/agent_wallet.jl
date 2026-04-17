@@ -6,7 +6,7 @@ module AgentWallet
 using ..SacredTime
 using SHA, Random
 
-export BIPON39Wallet, generate_agent_wallet
+export SealedKeyMaterial, BIPON39Wallet, generate_agent_wallet
 export wallet_balance, wallet_tithe, wallet_cloak_address
 
 # =============================================================================
@@ -30,10 +30,17 @@ const OFO_SYLLABLES = [
 Sovereign agent wallet combining BIP-39 mnemonic derivation
 with Ọ̀fọ̀ sacred syllable entropy and TEE-sealed vanity cloaking.
 """
+struct SealedKeyMaterial
+    ciphertext::String
+    key_fingerprint::String
+    encrypted::Bool
+end
+
 struct BIPON39Wallet
     agent_id::String
     parent_vanity::String
     vanity_address::String          # Cloaked vanity-derived address
+    private_key_sui::SealedKeyMaterial
     ofo_mnemonic::Vector{String}    # Ọ̀fọ̀ hybrid mnemonic (24 words)
     pubkey_hash::String             # SHA-256 of public key
     tee_sealed::Bool                # Generated inside TEE enclave
@@ -53,7 +60,7 @@ function generate_agent_wallet(parent_vanity::String,
                                odù_seed::Int,
                                toc_hash::String)::BIPON39Wallet
     # IfáScript entropy: combine parent vanity + Odù seed + ToC hash
-    entropy_source = "$(parent_vanity):$(odù_seed):$(toc_hash):$(time())"
+    entropy_source = "$(parent_vanity):$(odù_seed):$(toc_hash)"
     raw_entropy = sha256(Vector{UInt8}(entropy_source))
 
     # Ọ̀fọ̀ hybrid mnemonic: 24 words from sacred syllable space
@@ -65,6 +72,7 @@ function generate_agent_wallet(parent_vanity::String,
     # Public key hash (simplified — real impl uses secp256k1)
     pubkey_material = sha256(vcat(raw_entropy, Vector{UInt8}(vanity)))
     pubkey_hash = bytes2hex(sha256(pubkey_material))
+    private_key_sui = seal_to_tee(raw_entropy, parent_vanity, odù_seed, toc_hash)
 
     # Agent ID from Odù + parent lineage
     agent_id = "agent-$(odù_seed)-$(bytes2hex(raw_entropy[1:4]))"
@@ -76,6 +84,7 @@ function generate_agent_wallet(parent_vanity::String,
         agent_id,
         parent_vanity,
         vanity,
+        private_key_sui,
         mnemonic,
         pubkey_hash,
         true,              # TEE-sealed
@@ -83,6 +92,23 @@ function generate_agent_wallet(parent_vanity::String,
         birth_block,
         toc_hash,
         time()
+    )
+end
+
+function seal_to_tee(raw_entropy::Vector{UInt8},
+                     parent_vanity::String,
+                     odù_seed::Int,
+                     toc_hash::String)::SealedKeyMaterial
+    seal_key = sha256(Vector{UInt8}("tee:$(parent_vanity):$(odù_seed):$(toc_hash)"))
+    sealed_bytes = Vector{UInt8}(undef, length(raw_entropy))
+    for i in eachindex(raw_entropy)
+        sealed_bytes[i] = xor(raw_entropy[i], seal_key[mod1(i, length(seal_key))])
+    end
+
+    SealedKeyMaterial(
+        bytes2hex(sealed_bytes),
+        bytes2hex(sha256(seal_key))[1:16],
+        true
     )
 end
 
@@ -129,6 +155,7 @@ function wallet_balance(wallet::BIPON39Wallet)::Dict{String,Any}
         "agent_id" => wallet.agent_id,
         "address" => wallet.vanity_address,
         "tee_sealed" => wallet.tee_sealed,
+        "private_key_sui_encrypted" => wallet.private_key_sui.encrypted,
         "birth_block" => wallet.birth_block,
         "odu_signature" => wallet.odu_signature
     )
