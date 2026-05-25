@@ -25,10 +25,7 @@ const DAY_INDEX = {
   thursday: 4, friday: 5, saturday: 6
 };
 
-const ORISA_BY_INDEX = [
-  'Èṣù-Ẹ̀légbára', 'Ṣàngó', 'Ọṣun',
-  'Ọ̀rúnmìlà', 'Ọya', 'Ògún', 'Ọbàtálá'
-];
+const ORISA_CYCLE = ['Èṣù-Ẹ̀légbára', 'Ṣàngó', 'Ọṣun', 'Yemọja', 'Ọya', 'Ògún', 'Ọbàtálá'];
 
 // Spiral phase names — the relationship between two time streams
 const SPIRAL_PHASES = [

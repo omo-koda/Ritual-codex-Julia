@@ -36,7 +36,7 @@ const BTC_ORISA_CYCLE = [
   'Èṣù-Ẹ̀légbára',  // BTC Sunday (block % 1008 → day 0)
   'Ṣàngó',           // BTC Monday
   'Ọṣun',            // BTC Tuesday
-  'Ọ̀rúnmìlà',       // BTC Wednesday
+  'Yemọja',         // BTC Wednesday
   'Ọya',             // BTC Thursday
   'Ògún',            // BTC Friday
   'Ọbàtálá',         // BTC Saturday (Sabbath)

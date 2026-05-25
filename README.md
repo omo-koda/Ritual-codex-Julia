@@ -25,7 +25,7 @@ The Ritual Codex encodes a **7-day spiritual calendar** where each day is aligne
 | Sunday | Ọjọ́ Àìkú | Èṣù-Ẹ̀légbára | Fire + Air | 396 Hz | Beginnings, Paths |
 | Monday | Ọjọ́ Ajé | Ṣàngó | Fire | 288 Hz | Power, Leadership |
 | Tuesday | Ọjọ́ Ìṣégun | Ọṣun | Water | 528 Hz | Love, Abundance |
-| Wednesday | Ọjọ́ Rú | Ọ̀rúnmìlà | Ether | 639 Hz | Wisdom, Divination |
+| Wednesday | Ọjọ́ Rú | Yemọja | Water | 639 Hz | Protection, Depth |
 | Thursday | Ọjọ́ Bọ̀ | Ọya | Air + Storm | 741 Hz | Change, Revolution |
 | Friday | Ọjọ́ Ẹtì | Ògún | Earth + Metal | 852 Hz | Work, Mastery |
 | Saturday | Ọjọ́ Àbámẹ́ta | Ọbàtálá | Air + Ether | 963 Hz | Rest, Wisdom |

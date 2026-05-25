@@ -125,14 +125,14 @@ end
 function route_to_lobes(gate::RitualGate, spiral::SpiralTime)::Vector{String}
     # Map gates to Ọmọ Kọ́dà lobe activations
     routing = Dict(
-        SABBATH => ["Ọbàtálá", "Ògún", "Orunmila"],  # Rest, audit, wisdom
+        SABBATH => ["Ọbàtálá", "Ògún", "Yemọja"],  # Rest, audit, wisdom
         ÈṢÙ² => ["Èṣù", "Ògún", "Ọ̀yá"],             # Crossroads, tech, change
         JUBILEE_MAJOR => ["Ọbàtálá", "Yemọja", "Ọ̀ṣun"],  # Justice, nurture, wealth
-        VOID => ["Orunmila", "Ọbàtálá"],           # Oracle, clarity
+        VOID => ["Yemọja", "Ọbàtálá"],           # Oracle, clarity
         CAPSTONE => ["Ṣàngó", "Ọbàtálá", "Èṣù"]    # Power, justice, opener
     )
     
-    get(routing, gate, ["Orunmila"])  # Default to oracle
+    get(routing, gate, ["Yemọja"])  # Default to oracle
 end
 
 end # module OrganismBridge
