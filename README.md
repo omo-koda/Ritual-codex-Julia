@@ -39,15 +39,19 @@ ritual-codex/
 ├── codex.md                    # Full 7-day ritual codex document
 │                                 (49-facet grids + 20 Sacred 7s + all daily rituals)
 ├── json/                       # Machine-readable daily resonance files
-│   ├── sunday.json
-│   ├── monday.json
-│   ├── tuesday.json
-│   ├── wednesday.json
-│   ├── thursday.json
-│   ├── friday.json
-│   └── saturday.json
+│   ├── sunday.json … saturday.json
+├── src/                        # Julia (Ọ̀ṢỌ́VM-native) sacred time system
+│   ├── time/sacred_time.jl     #   BTC anchoring, 5-layer Òrìṣà, ritual gates
+│   ├── calendar/spiral_calendar.jl  # 13-moon year, Jubilee, almanac generation
+│   └── bridge/organism_integration.jl  # Organism-core event bridge
+├── data/
+│   └── year_1_almanac.json     # Generated first-week almanac sample
+├── btc-time.js                 # BTC Time engine — block height as sovereign clock
+├── spiral-calendar.js          # Spiral Calendar — BTC + Gregorian convergence
+├── technosis-adapter.js        # Ecosystem bridge (Swibe v1.1 + Spiral Calendar)
 ├── swibe-skill/                # Swibe automation skill
 │   └── daily_routine.swibe     # Auto-loads daily config at startup
+├── README-SPIRAL.md            # Full spiral calendar documentation
 └── README.md
 ```
 
@@ -96,50 +100,22 @@ console.log(resonance.ritual_practice.mantra);
   },
   "ritual_practice": {
     "dress": "Red or Red/Black",
-    "lenses": "Red",
-    "objects": ["Crossroads symbol", "candy", "cigar"],
-    "sound": "396 Hz tone or bell ring",
-    "food": ["Pomegranate", "pepper", "strawberries"],
-    "movement": "Barefoot walk, foot washing, rhythmic dancing",
+    "objects": ["Crossroads symbol", "candy", "cigar", "small key", "bell"],
     "mantra": "I open the paths before me with clarity and courage.",
-    "crypto": "L1 tokens, gatekeeper access protocols",
-    "hidden_message": "The first step opens the journey — choose wisely."
+    "crypto": "Layer 1s, Gatekeeper Protocols"
   }
 }
 ```
 
 ---
 
-## 🔧 Swibe Skill Integration
+## 🧭 The 49-Facet Lattice
 
-The `swibe-skill/daily_routine.swibe` file provides automated daily resonance loading:
+Each day is mapped across 49 dimensions of spiritual and technical metadata, including:
 
-```swibe
-skill daily_routine {
-  secure {
-    let today = date.weekday()
-    let config = load_routine("~/.daily_routine.json")[today]
-
-    -- Apply neutral primitives
-    if config.color { set_ui_color(config.color) }
-    if config.tone { play_tone(config.tone) }
-    if config.principle { set_principle_filter(config.principle) }
-    if config.virtue { apply_virtue_check(config.virtue) }
-  }
-}
-```
-
----
-
-## 🧩 The 49-Facet Lattice
-
-Each day maps across 49 dimensions:
-
-| # | Facet | Function |
-|---|-------|----------|
-| 1 | Day | Anchors time in evolve() cycles |
+| ID | Facet | Technical Function |
+|----|-------|-------------------|
 | 2 | Planetary Ruler | Seeds random oracles in IfáScript |
-| 3 | Chakra | Bodily map for ai.citizen health checks |
 | 4 | Tone / Frequency | Sound keys for NFT unlock in shrines |
 | 5 | Hermetic Principle | Philosophical invariants in RLM loops |
 | 6 | Element | Elemental signatures in BIPỌ̀N39 mnemonics |
@@ -181,11 +157,51 @@ The Ritual Codex is primarily a data and definition repository. To utilize its c
 
 ---
 
-## Part of the Technosis Sovereign Ecosystem
+## ⟐ Spiral Calendar + BTC Time
 
-This component is a core piece of a larger architecture for creating and coordinating sovereign AI. For more information, see the [organism-core repository](https://github.com/Bino-Elgua/organism-core).
+The Spiral Calendar merges **two time streams** — Gregorian (human day) and BTC (block height) — into a single ritual clock.
 
-Àṣẹ.
+### Spiral Phases
+
+| Offset | Phase | Meaning |
+|--------|-------|---------|
+| 0 | **Resonance** | Both streams align on the same Òrìṣà — 2× ritual weight |
+| 1 | Echo | Near-alignment, fading harmony |
+| 2 | Drift | Streams diverge |
+| 3 | **Opposition** | Maximum tension — two archetypes in dialogue (0.5× weight) |
+| 4 | Return Drift | Convergence begins |
+| 5 | Return Echo | Approaching alignment |
+| 6 | Mirror | Inverse reflection |
+
+### BTC Time Primitives
+
+- **Block height** → sovereign clock (no wall-clock dependency)
+- **BTC Day** = 144 blocks, **BTC Week** = 1008 blocks
+- **BTC Weekday** maps to the same 7 Òrìṣà cycle
+- **Halving Epochs** map to the 7 alchemical stages
+- **1440-wallet minute slot** = `blockHeight % 1440`
+- **Sabbath** enforced when *either* stream says Saturday (weight → 0)
+
+### Usage
+
+```javascript
+import SpiralCalendar from './spiral-calendar.js';
+
+const spiral = new SpiralCalendar();       // estimates block height
+// const spiral = new SpiralCalendar(893400); // or pass exact height
+
+console.log(spiral.toString());
+// ⟐ RESONANCE [Ọṣun] block:893400 era:Fourth Reduction weight:2x
+
+const snap = spiral.snapshot();
+snap.spiral.phase;           // "Resonance"
+snap.spiral.ritual_weight;   // 2.0
+snap.btc.halving_era;        // 4
+snap.btc.epoch.alchemy;      // "Fermentation"
+snap.gregorian.orisa;        // "Ọṣun"
+```
+
+---
 
 ## 🔗 Integration Points
 
@@ -195,20 +211,11 @@ The Ritual Codex feeds into:
 - **OSOVM** — Tokenomics mappings, sabbath enforcement
 - **IfáScript** — Oracle seeding, entropy sources
 - **Twelve Thrones** — Council governance, verdict rules
-- **ShrineApp** — NFT tiers, offering rituals
-- **Zàngbétò** — Sandboxing barrier breaks
-- **Ẹ̀ṣù Router** — Allowlist mappings per day
 
 ---
 
-## License
+## Part of the Technosis Sovereign Ecosystem
 
-Built for Technosis & Ọmọ Kọ́dà. Àṣẹ. 🤍🗿
+This component is a core piece of a larger architecture for creating and coordinating sovereign AI. For more information, see the [organism-core repository](https://github.com/Bino-Elgua/organism-core).
 
-
----
-**Note:** The primary branch for this repository is now `main`.
-
-## The Agent Skill Library
-
-Ritual Codex is a library of agent skills and plugin adapters for the Swibe language. It provides a collection of pre-defined behaviors and interfaces that allow agents to interact with the world and each other, such as the Technosis Adapter for Sui testnet integration.
+Àṣẹ.
