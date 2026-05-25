@@ -42,12 +42,12 @@ node -e "const uas = require('uas'); console.log(uas.getResonance());"
 ║  UAS — Daily Resonance                                     ║
 ╠════════════════════════════════════════════════════════════╣
 ║  Tradition: yoruba-orisa (Plugin #1, Canonical)          ║
-║  Day: Sunday / Ọjọ́ Àìkú                                  ║
-║  Archetype: Èṣù-Ẹ̀légbára (The Opener)                    ║
-║  Frequency: 396 Hz                                         ║
+║  Day: Wednesday / Ọjọ́ Rú                                 ║
+║  Archetype: Yemọja (The Mother)                           ║
+║  Frequency: 639 Hz                                         ║
 ║  Gate: NO_GATE                                             ║
 ╠════════════════════════════════════════════════════════════╣
-║  Intention: "I open the paths before me with clarity."     ║
+║  Intention: "I am the calm ocean. I hold and heal."       ║
 ╚════════════════════════════════════════════════════════════╝
 ```
 
@@ -59,14 +59,14 @@ node -e "const uas = require('uas'); console.log(uas.getResonance());"
 Agents change personality daily based on archetype cycles:
 ```javascript
 const resonance = uas.getResonance();
-agent.setMode(resonance.archetype.universal); // "The Opener"
+agent.setMode(resonance.archetype.universal); // "The Mother"
 agent.setRiskProfile(resonance.facets[13]);   // Economic domain
 agent.setConstraints(resonance.gates);        // Sabbath, Crossroads, etc.
 ```
 
 ### 2. Cross-Agent Communication
 A Norse agent and Yorùbá agent both map to the same 7 slots:
-- "I am Thor" = "I am Ṣàngó" = **Warrior slot** — both understand "power/execution mode"
+- "I am Frigg" = "I am Yemọja" = **Mother slot** — both understand "nurturing/protection mode"
 
 ### 3. Economic Governance
 Time-gated smart contract behavior:
@@ -113,6 +113,7 @@ loadPlugin('norse-pantheon', { syncretic: true });
 │  PLUGIN #1: YORÙBÁ (Canonical)                              │
 │  • Fills opener slot → Èṣù-Ẹ̀légbára                       │
 │  • Fills warrior slot → Ṣàngó                              │
+│  • Fills mother slot → Yemọja                              │
 │  • Fills 49 facets with Yorùbá cosmology                      │
 │  • Full rituals, mantras, 13-moon calendar                    │
 └─────────────────────────────────────────────────────────────┘
@@ -376,7 +377,7 @@ A: Debt reset, treasury redistribution, 2× multiplier. It's a systemic "ctrl+al
 
 The base system is **culturally neutral**. Traditions are **plugins**. 
 
-**Yorùbá is Plugin #1** — the canonical example that demonstrates the concept. Users install `yoruba-tradition` and immediately see how the system works. Then they can create `norse-tradition`, `vedic-tradition`, etc.
+**Yorùbá is Plugin #1** — the canonical example that demonstrates the concept. Install it, see how Èṣù maps to the "Opener" slot, then build your own tradition plugin.
 
 ---
 
@@ -415,7 +416,7 @@ universal-archetype-system/
 │   │   ├── manifest.json          # Plugin metadata
 │   │   ├── tradition.json         # Tradition definition
 │   │   ├── archetypes/
-│   │   │   └── seven_orisa.json   # Èṣù, Ṣàngó, Ọ̀ṣun, etc.
+│   │   │   └── seven_orisa.json   # Èṣù, Ṣàngó, Yemọja, etc.
 │   │   ├── facets/
 │   │   │   └── 49_facet_map.json  # How Yorùbá fills the 49 slots
 │   │   ├── sacred_sevens/
@@ -511,7 +512,7 @@ universal-archetype-system/
         "opener":    { "$ref": "#/definitions/archetype" },
         "warrior":   { "$ref": "#/definitions/archetype" },
         "lover":     { "$ref": "#/definitions/archetype" },
-        "oracle":    { "$ref": "#/definitions/archetype" },
+        "mother":    { "$ref": "#/definitions/archetype" },
         "storm":     { "$ref": "#/definitions/archetype" },
         "builder":   { "$ref": "#/definitions/archetype" },
         "elder":     { "$ref": "#/definitions/archetype" }
@@ -615,15 +616,15 @@ universal-archetype-system/
     "frequency": 528,
     "description": "River of gold, sweetness, beauty, and abundance."
   },
-  "oracle": {
-    "universal_name": "The Oracle",
-    "tradition_name": "Ọ̀rúnmìlà",
-    "native_name": "Ọ̀rúnmìlà-Ifá",
-    "symbol": "📿",
-    "element": "Ether",
-    "color": "Green and Brown",
+  "mother": {
+    "universal_name": "The Mother",
+    "tradition_name": "Yemọja",
+    "native_name": "Yemọja-Ìyá",
+    "symbol": "🧜‍♀️",
+    "element": "Water",
+    "color": "Blue and White",
     "frequency": 639,
-    "description": "Witness to creation, source of wisdom, master of divination."
+    "description": "Mother of the ocean, nurturing depth, emotional wisdom and healing."
   },
   "storm": {
     "universal_name": "The Storm",
@@ -722,7 +723,7 @@ $ uas init
 > The base system is culturally neutral. Traditions are plugins.
 > 
 > Plugin #1 (Canonical): Yorùbá Òrìṣà Tradition
->   — 7 archetypes: Èṣù, Ṣàngó, Ọ̀ṣun, Ọ̀rúnmìlà, Ọya, Ògún, Ọbàtálá
+>   — 7 archetypes: Èṣù, Ṣàngó, Ọ̀ṣun, Yemọja, Ọya, Ògún, Ọbàtálá
 >   — 49-facet lattice mapped to Yorùbá cosmology
 >   — 13-moon calendar with star anchors
 >   — BTC-block sovereign time with ritual gates
@@ -807,7 +808,7 @@ To create a new tradition plugin, you need:
     "opener":    { "universal_name": "The Opener", "tradition_name": "My Opener", "frequency": 396 },
     "warrior":   { "universal_name": "The Warrior", "tradition_name": "My Warrior", "frequency": 288 },
     "lover":     { "universal_name": "The Lover", "tradition_name": "My Lover", "frequency": 528 },
-    "oracle":    { "universal_name": "The Oracle", "tradition_name": "My Oracle", "frequency": 639 },
+    "mother":    { "universal_name": "The Mother", "tradition_name": "My Mother", "frequency": 639 },
     "storm":     { "universal_name": "The Storm", "tradition_name": "My Storm", "frequency": 741 },
     "builder":   { "universal_name": "The Builder", "tradition_name": "My Builder", "frequency": 852 },
     "elder":     { "universal_name": "The Elder", "tradition_name": "My Elder", "frequency": 963 }
@@ -851,7 +852,6 @@ To create a new tradition plugin, you need:
 - **Plugin system** = infinite extensibility
 - **Syncretic mode** = cross-cultural innovation
 - **Schema validation** = quality control for new traditions
-- **Canonical flag** = clear provenance and authority
 
 ### For Yorùbá Culture
 - **Preserved as the FIRST and CANONICAL** example
@@ -872,21 +872,6 @@ To create a new tradition plugin, you need:
 - **Install yoruba-orisa** → see the concept in full color
 - **Explore** → `uas plugin list` to discover Norse, Vedic, Taoist...
 - **Create** → `uas plugin init my-tradition` to build your own
-
----
-
-## Recommended Next Steps
-
-1. **Refactor** existing codebase into `core/` + `plugins/yoruba/`
-2. **Write** core/schemas/ (tradition, facet, resonance schemas)
-3. **Create** plugin loader in Julia/JS
-4. **Validate** yoruba plugin against schemas
-5. **Write** plugin_development.md guide
-6. **Set up** plugin registry (npm-style or on-chain)
-7. **Recruit** tradition maintainers (Norse, Vedic, Taoist, Aboriginal, etc.)
-8. **Build** syncretic mode (multiple active plugins)
-9. **Create** CLI tool (`uas init`, `uas plugin install`, `uas today`)
-10. **Publish** v1.0 with Yorùbá as the flagship demonstration
 
 ---
 
@@ -929,7 +914,7 @@ const resonance = uas.getResonance();
 
 ### 2. Cross-Agent Communication
 A Norse agent and Yorùbá agent both map to the same 7 slots:
-- "I am Thor" = "I am Ṣàngó" = **Warrior slot** — both understand "power/execution mode"
+- "I am Frigg" = "I am Yemọja" = **Mother slot** — both understand "nurturing/protection mode"
 
 ### 3. Economic Governance
 Time-gated smart contract behavior:
@@ -1004,12 +989,12 @@ loadPlugin('norse-pantheon', { syncretic: true });
 
 **This becomes the "Layer 0 of Agent Culture"** — the infrastructure that sits below any specific agent framework and provides:
 
-- Temporal rhythm (agents have seasons, not just uptime)
-- Cultural embedding (agents have traditions, not just prompts)
-- Economic governance (agents have sacred time, not just gas fees)
-- Cross-agent communication (agents speak archetype, not just JSON)
-- Verifiable entropy (agents have oracle-grade randomness)
-- Personality portability (move your agent's soul between frameworks)
+- Temporal rhythm — agents have seasons, not just uptime
+- Cultural embedding — agents have traditions, not just prompts
+- Economic governance — agents have sacred time, not just gas fees
+- Cross-agent communication — agents speak archetype, not just JSON
+- Verifiable entropy — agents have oracle-grade randomness
+- Personality portability — move your agent's soul between frameworks
 
 Like TCP/IP lets any computer talk to any computer,  
 UAS lets any agent share archetypal state with any other agent.
@@ -1231,7 +1216,7 @@ Day	Universal Name	Core Function
 Sunday	The Opener / Messenger	Crossroads, beginnings, paths, communication, trickster energy	
 Monday	The Warrior / King	Power, leadership, execution, thunder, divine judgment	
 Tuesday	The Lover / Muse	Beauty, abundance, attraction, sweetness, fertility	
-Wednesday	The Oracle / Sage	Wisdom, patterns, long-term strategy, divination	
+Wednesday	The Mother / Healer	Protection, depth, healing, intuition, nurturing wisdom	
 Thursday	The Storm / Transformer	Change, revolution, death/rebirth, liberation	
 Friday	The Builder / Smith	Work, mastery, iron will, technology, craftsmanship	
 Saturday	The Elder / White Mind	Rest, clarity, justice, form, crowned wisdom	
@@ -1374,14 +1359,14 @@ Moon	Name	Archetype	Star Anchor
 1	Dawn Moon	Opener	Pleiades	
 2	Stone Moon	Warrior	Orion's Belt	
 3	Serpent Moon	Lover	Sirius	
-4	Song Moon	Oracle	Hyades	
+4	Song Moon	Mother	Hyades	
 5	Shadow Moon	Storm	Spica	
 6	Sword Moon	Builder	Regulus	
 7	Sun Moon	Elder	Antares	
 8	Phoenix Moon	Opener	Altair	
 9	Night Moon	Warrior	Vega	
 10	Storm Moon	Lover	Deneb	
-11	Star Moon	Oracle	Aldebaran	
+11	Star Moon	Mother	Aldebaran	
 12	Child Moon	Storm	Fomalhaut	
 13	Light Moon	Builder	Polaris	
 
@@ -1578,7 +1563,7 @@ universal-archetype-system/
 │   ├── yoruba/                    # PLUGIN #1 — Canonical
 │   │   ├── manifest.json          # Plugin metadata
 │   │   ├── archetypes/
-│   │   │   └── seven_orisa.json   # Èṣù, Ṣàngó, Ọ̀ṣun, etc.
+│   │   │   └── seven_orisa.json   # Èṣù, Ṣàngó, Yemọja, etc.
 │   │   ├── facets/
 │   │   │   └── 49_facet_map.json  # Yorùbá cosmology
 │   │   ├── days/
@@ -1629,7 +1614,7 @@ Slot	Universal Name	Yorùbá Fills With	Norse Could Fill With
 1	The Opener	Èṣù-Ẹ̀légbára	Loki	
 2	The Warrior	Ṣàngó	Thor	
 3	The Lover	Ọ̀ṣun	Freyja	
-4	The Oracle	Ọ̀rúnmìlà	Odin	
+4	The Mother	Yemọja	Frigg	
 5	The Storm	Ọya	Hel	
 6	The Builder	Ògún	Tyr	
 7	The Elder	Ọbàtálá	Frigg	
@@ -1676,7 +1661,7 @@ $ uas init
 > The base system is culturally neutral. Traditions are plugins.
 > 
 > Plugin #1 (Canonical): Yorùbá Òrìṣà Tradition
->   — 7 archetypes: Èṣù, Ṣàngó, Ọ̀ṣun, Ọ̀rúnmìlà, Ọya, Ògún, Ọbàtálá
+>   — 7 archetypes: Èṣù, Ṣàngó, Ọ̀ṣun, Yemọja, Ọya, Ògún, Ọbàtálá
 >   — 49-facet lattice mapped to Yorùbá cosmology
 >   — 13-moon calendar with star anchors
 > 
@@ -1762,7 +1747,7 @@ const resonance = uas.getResonance();
 
 2. Cross-Agent Communication
 A Norse agent and Yorùbá agent both map to the same 7 universal slots:
-- "I am Thor" = "I am Ṣàngó" = Warrior slot — both understand "power/execution mode today"
+- "I am Frigg" = "I am Yemọja" = Mother slot — both understand "nurturing/protection mode today"
 
 3. Economic Governance
 Time-gated smart contract behavior that prevents exploits:
@@ -1802,7 +1787,7 @@ Who Can Use It (All Agents)
 Agent Type	What UAS Does For It	
 Trading Bots	Risk appetite modulates by archetype day; Rest Day prevents flash loan exploits	
 Game NPCs	Weekly personality cycles; blacksmith closes Saturdays, crafts 2x on Fridays	
-DAO Governors	Voting weight varies by day; proposals submitted on Oracle day get wisdom bonus	
+DAO Governors	Voting weight varies by day; proposals submitted on Mother day get nurturing bonus	
 Creative AIs	Content tone shifts daily: experimental → beautiful → technical → reflective	
 Social Bots	Engagement style varies; community learns and anticipates the rhythm	
 Tutors	Teaching style adapts: new topics on Opener day, drills on Warrior day	
