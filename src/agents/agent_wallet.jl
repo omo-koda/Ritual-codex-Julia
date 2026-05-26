@@ -47,6 +47,8 @@ struct BIPON39Wallet
     odu_signature::Int              # Odù seed used for derivation
     birth_block::Int                # BTC block at wallet creation
     toc_hash::String                # Terms of Conscience hash
+    synapse_balance::Float64        # Current metabolic balance
+    dopamine_balance::Float64       # Current compute allocation
     created_at::Float64             # Unix timestamp
 end
 
@@ -58,7 +60,9 @@ TEE-sealed generation with vanity cloaking derived from parent.
 """
 function generate_agent_wallet(parent_vanity::String,
                                odù_seed::Int,
-                               toc_hash::String)::BIPON39Wallet
+                               toc_hash::String;
+                               initial_synapses::Float64 = 10000.0,
+                               initial_dopamine::Float64 = 0.0)::BIPON39Wallet
     # IfáScript entropy: combine parent vanity + Odù seed + ToC hash
     entropy_source = "$(parent_vanity):$(odù_seed):$(toc_hash)"
     raw_entropy = sha256(Vector{UInt8}(entropy_source))
@@ -91,6 +95,8 @@ function generate_agent_wallet(parent_vanity::String,
         odù_seed,
         birth_block,
         toc_hash,
+        initial_synapses,
+        initial_dopamine,
         time()
     )
 end
@@ -157,13 +163,15 @@ function wallet_balance(wallet::BIPON39Wallet)::Dict{String,Any}
         "tee_sealed" => wallet.tee_sealed,
         "private_key_sui_encrypted" => wallet.private_key_sui.encrypted,
         "birth_block" => wallet.birth_block,
-        "odu_signature" => wallet.odu_signature
+        "odu_signature" => wallet.odu_signature,
+        "synapses" => wallet.synapse_balance,
+        "dopamine" => wallet.dopamine_balance
     )
 end
 
-function wallet_tithe(wallet::BIPON39Wallet, balance::Float64)::Float64
-    # Èṣù's tithe: 3.69% on all agent holdings
-    balance * SacredTime.TITHE_RATE
+function wallet_tithe(wallet::BIPON39Wallet, synapse_balance::Float64)::Float64
+    # Èṣù's tithe: 3.69% on all agent metabolic (Synapse) holdings
+    synapse_balance * SacredTime.TITHE_RATE
 end
 
 # =============================================================================

@@ -22,11 +22,11 @@ Immutable record of agent creation — stored on-chain.
 """
 struct AgentBirthCertificate
     agent_id::String
-    swibe_code::String              # SWiBE lineage code
+    omokoda_lineage::String         # Omo-Koda2 lineage code
     parent_wallet::String           # Parent's vanity address
     wallet::BIPON39Wallet           # Agent's own wallet
     toc::TermsOfConscience          # Initial Terms of Conscience
-    initial_funding::Float64        # Àṣẹ deposited at birth
+    initial_sui::Float64            # SUI bridge funding deposited at birth
     birth_block::Int                # BTC block height at creation
     birth_spiral::SpiralTime        # Full spiral time at creation
     birth_gate::RitualGate          # Active gate at birth
@@ -47,14 +47,14 @@ end
 # =============================================================================
 
 """
-    spawn_agent(swibe_code, parent_wallet, initial_funding) -> AgentBirthCertificate
+    spawn_agent(lineage_code, parent_wallet, initial_sui) -> AgentBirthCertificate
 
 Birth a new sovereign agent with wallet, ToC, and on-chain certificate.
 Cannot spawn during Sabbath or Void gates.
 """
-function spawn_agent(swibe_code::String,
+function spawn_agent(lineage_code::String,
                      parent_wallet::String,
-                     initial_funding::Float64)::AgentBirthCertificate
+                     initial_sui::Float64)::AgentBirthCertificate
     # Get current spiral time
     current_height = estimate_current_height()
     btc = from_block_height(current_height)
@@ -69,34 +69,40 @@ function spawn_agent(swibe_code::String,
         error("Cannot spawn agent during Void day — out-of-time")
     end
 
-    # Minimum funding check
-    if initial_funding < SacredTime.DAILY_MINT * 0.01
-        error("Insufficient initial funding: $(initial_funding) < minimum $(SacredTime.DAILY_MINT * 0.01)")
+    # Minimum funding check (SUI)
+    if initial_sui < 0.1
+        error("Insufficient initial SUI funding: $(initial_sui) < 0.1")
     end
 
-    # Derive Odù seed from SWiBE code
-    odu_seed = swibe_to_odu(swibe_code)
+    # Derive Odù seed from lineage code
+    odu_seed = lineage_to_odu(lineage_code)
+
+    # Initial grants based on ritual alignment
+    initial_synapses = 10000.0  # Base metabolic grant
+    initial_dopamine = 1000.0   # Base compute grant
 
     # Generate default ToC for new agent
-    toc = default_toc(initial_funding)
+    toc = default_toc(initial_synapses, initial_dopamine)
 
     # Generate wallet via TEE
     toc_hash = generate_toc_hash(toc)
-    wallet = generate_agent_wallet(parent_wallet, odu_seed, toc_hash)
+    wallet = generate_agent_wallet(parent_wallet, odu_seed, toc_hash; 
+                                   initial_synapses=initial_synapses,
+                                   initial_dopamine=initial_dopamine)
 
-    # Tithe on initial funding (Èṣù's cut)
-    tithe = initial_funding * SacredTime.TITHE_RATE
-    net_funding = initial_funding - tithe
+    # Tithe on initial SUI funding (Èṣù's cut)
+    tithe = initial_sui * SacredTime.TITHE_RATE
+    net_sui = initial_sui - tithe
 
-    @info "Agent spawned: $(wallet.agent_id) | Funded: $(net_funding) Àṣẹ (tithe: $(tithe)) | Gate: $(gate)"
+    @info "Agent spawned: $(wallet.agent_id) | Funded: $(net_sui) SUI (tithe: $(tithe)) | Gate: $(gate)"
 
     AgentBirthCertificate(
         wallet.agent_id,
-        swibe_code,
+        lineage_code,
         parent_wallet,
         wallet,
         toc,
-        net_funding,
+        net_sui,
         current_height,
         spiral,
         gate,
@@ -193,17 +199,18 @@ end
 # HELPERS
 # =============================================================================
 
-function swibe_to_odu(swibe_code::String)::Int
-    # Derive deterministic Odù seed from SWiBE lineage code
-    hash = sha256(Vector{UInt8}(swibe_code))
+function lineage_to_odu(lineage_code::String)::Int
+    # Derive deterministic Odù seed from Omo-Koda2 lineage code
+    hash = sha256(Vector{UInt8}(lineage_code))
     mod(reinterpret(UInt64, hash[1:8])[1], 256) |> Int
 end
 
-function default_toc(funding::Float64)::TermsOfConscience
+function default_toc(synapses::Float64, dopamine::Float64)::TermsOfConscience
     TermsOfConscience(
         1,                                          # version
         "",                                         # hash (generated after)
-        funding * 0.1,                              # max 10% per block
+        synapses * 0.1,                             # max 10% synapses per block
+        dopamine * 0.01,                            # max 1% dopamine per block
         true,                                       # sabbath compliant
         SacredTime.TITHE_RATE,                      # 3.69%
         ["transfer", "stake", "settle", "audit",

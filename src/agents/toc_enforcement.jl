@@ -22,15 +22,16 @@ Proposed agent action subject to ToC validation.
 struct Action
     action_type::String         # "transfer", "mint", "stake", "govern", "spawn"
     target::String              # Target address or resource
-    amount::Float64             # Value involved (0.0 for non-economic)
+    dopamine_cost::Float64      # Global compute cost
+    synapse_cost::Float64       # Agent metabolic cost
     metadata::Dict{String,Any}  # Action-specific parameters
 end
 
-Action(action_type::String, amount::Real) =
-    Action(action_type, "", Float64(amount), Dict{String,Any}())
+Action(action_type::String, dopamine::Real, synapse::Real) =
+    Action(action_type, "", Float64(dopamine), Float64(synapse), Dict{String,Any}())
 
-Action(action_type::String, target::String, amount::Real) =
-    Action(action_type, target, Float64(amount), Dict{String,Any}())
+Action(action_type::String, target::String, dopamine::Real, synapse::Real) =
+    Action(action_type, target, Float64(dopamine), Float64(synapse), Dict{String,Any}())
 
 """
     TermsOfConscience
@@ -41,7 +42,8 @@ TEE-sealed — the agent cannot modify its own ToC.
 struct TermsOfConscience
     version::Int
     toc_hash::String                    # SHA-256 of full terms
-    max_transfer_per_block::Float64     # Spending cap per BTC block
+    max_synapses_per_block::Float64     # Metabolic cap per BTC block
+    max_dopamine_per_block::Float64     # Compute cap per BTC block
     sabbath_compliant::Bool             # Must honor Sabbath gates
     tithe_rate::Float64                 # Èṣù tithe percentage
     allowed_actions::Vector{String}     # Whitelist of action types
@@ -64,9 +66,14 @@ function _validate_static_constraints(agent_id::String,
         return (allowed = false, reason = "forbidden_target")
     end
 
-    if proposed_action.amount > toc.max_transfer_per_block
-        @warn "ToC DENIED [$agent_id]: amount $(proposed_action.amount) exceeds cap $(toc.max_transfer_per_block)"
-        return (allowed = false, reason = "amount_exceeds_cap")
+    if proposed_action.synapse_cost > toc.max_synapses_per_block
+        @warn "ToC DENIED [$agent_id]: synapse cost $(proposed_action.synapse_cost) exceeds cap $(toc.max_synapses_per_block)"
+        return (allowed = false, reason = "synapse_exceeds_cap")
+    end
+
+    if proposed_action.dopamine_cost > toc.max_dopamine_per_block
+        @warn "ToC DENIED [$agent_id]: dopamine cost $(proposed_action.dopamine_cost) exceeds cap $(toc.max_dopamine_per_block)"
+        return (allowed = false, reason = "dopamine_exceeds_cap")
     end
 
     (allowed = true, reason = "static_constraints_clear")
@@ -75,8 +82,9 @@ end
 function _validate_tithe(agent_id::String,
                          proposed_action::Action,
                          toc::TermsOfConscience)::NamedTuple
-    if proposed_action.amount > 0.0
-        tithe_due = proposed_action.amount * toc.tithe_rate
+    # Tithe applies to metabolic (Synapse) movement
+    if proposed_action.synapse_cost > 0.0
+        tithe_due = proposed_action.synapse_cost * toc.tithe_rate
         tithe_paid = get(proposed_action.metadata, "tithe_included", 0.0)
         if tithe_paid < tithe_due
             @warn "ToC DENIED [$agent_id]: tithe $(tithe_paid) < required $(tithe_due)"
@@ -90,7 +98,8 @@ end
 function TOC(;
     version::Int = 1,
     toc_hash::String = "",
-    max_transfer_per_block::Float64 = 1_000_000.0,
+    max_synapses_per_block::Float64 = 1_000_000.0,
+    max_dopamine_per_block::Float64 = 10_000_000.0,
     sabbath_compliant::Bool = true,
     tithe_rate::Float64 = SacredTime.TITHE_RATE,
     allowed_actions::Vector{String} = ["settle", "audit", "reflect", "new_contract", "transfer", "mint", "stake", "govern", "spawn", "collect_debt"],
@@ -102,7 +111,8 @@ function TOC(;
     toc = TermsOfConscience(
         version,
         toc_hash,
-        max_transfer_per_block,
+        max_synapses_per_block,
+        max_dopamine_per_block,
         sabbath_compliant,
         tithe_rate,
         allowed_actions,
@@ -116,7 +126,8 @@ function TOC(;
         return TermsOfConscience(
             toc.version,
             generate_toc_hash(toc),
-            toc.max_transfer_per_block,
+            toc.max_synapses_per_block,
+            toc.max_dopamine_per_block,
             toc.sabbath_compliant,
             toc.tithe_rate,
             toc.allowed_actions,
@@ -213,15 +224,15 @@ function enforce_gate_constraints(action::Action,
         return (allowed = false, reason = "sabbath_gate")
     end
 
-    # Void day: no economic activity
-    if gate == SacredTime.VOID && action.amount > 0.0
+    # Void day: no economic activity (Synapse/Dopamine movement)
+    if gate == SacredTime.VOID && (action.synapse_cost > 0.0 || action.dopamine_cost > 0.0)
         @warn "ToC GATE DENIED: Void day — no economic actions permitted"
         return (allowed = false, reason = "void_gate")
     end
 
     # Èṣù²: tithe must be doubled at crossroads
-    if gate == SacredTime.ÈṢÙ² && action.amount > 0.0
-        doubled_tithe = action.amount * toc.tithe_rate * 2.0
+    if gate == SacredTime.ÈṢÙ² && action.synapse_cost > 0.0
+        doubled_tithe = action.synapse_cost * toc.tithe_rate * 2.0
         tithe_paid = get(action.metadata, "tithe_included", 0.0)
         if tithe_paid < doubled_tithe
             @warn "ToC GATE DENIED: Èṣù² — doubled tithe required ($(doubled_tithe))"

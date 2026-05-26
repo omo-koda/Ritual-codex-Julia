@@ -20,7 +20,9 @@ const BLOCKS_PER_MINUTE = 0.1     # inverse
 const GENESIS_BLOCK = 780000      # Ọ̀ṢỌ́VM epoch start
 const F1_THRESHOLD = 0.777        # From ecosystem spec
 const TITHE_RATE = 0.0369         # Èṣù's tithe
-const DAILY_MINT = 1440           # Àṣẹ per day
+const DOPAMINE_LIMIT = 86_000_000_000  # 86 Billion Dopamine (Global Pool)
+const SYNAPSE_LIMIT = 86_000_000       # 86 Million Synapses (Per Agent Max)
+const BRIDGE_TOKEN = "SUI"             # Human-facing bridge token
 
 const ORISA_NAMES = ["Èṣù", "Ṣàngó", "Ọ̀ṣun", "Yemọja", "Ọ̀yá", "Ògún", "Ọbàtálá"]
 

@@ -64,7 +64,7 @@ ritual-codex/
 ├── json/                         # Existing 7-day resonance files
 ├── btc-time.js                   # JavaScript BTC Time engine
 ├── spiral-calendar.js            # JavaScript Spiral Calendar
-├── technosis-adapter.js          # Swibe v1.1 bridge (JS + Spiral)
+├── omo-koda-adapter.js       # Omo-Koda2 Orchestrator (Phase 3 Birth)
 └── README-SPIRAL.md              # This file
 ```
 
@@ -78,7 +78,8 @@ ritual-codex/
 | Blocks/day | 144 (10-min blocks) |
 | F1 threshold | 0.777 |
 | Tithe rate | 3.69% |
-| Daily Àṣẹ mint | 1,440 |
+| Dopamine Pool | 86 Billion |
+| Synapse Cap | 86 Million |
 | Veils | 50 |
 | Moons/year | 13 |
 | Jubilee | 50 years |
@@ -178,7 +179,7 @@ The sacred time system runs in **two runtimes**:
 | Runtime | Files | Purpose |
 |---------|-------|---------|
 | **Julia** (Ọ̀ṢỌ́VM-native) | `src/time/`, `src/calendar/`, `src/bridge/` | Full 5-layer spiral, almanac generation, organism-core bridge |
-| **JavaScript** (Swibe/Node) | `btc-time.js`, `spiral-calendar.js`, `technosis-adapter.js` | Lightweight 2-stream convergence, Swibe plugin hooks |
+| **JavaScript** (Omo-Koda2) | `btc-time.js`, `spiral-calendar.js`, `omo-koda-adapter.js` | Lightweight 2-stream convergence, Omo-Koda2 birth orchestration |
 
 Both share the same canonical parameters (genesis block, tithe rate, sabbath rules).
 
